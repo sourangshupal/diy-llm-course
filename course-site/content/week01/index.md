@@ -9,10 +9,10 @@ By the end of this week, students should be able to:
 - Log metrics, hyperparameters, and artifacts to Weights & Biases (W&B).
 - Interpret a simple W&B dashboard.
 
-## Pre-Reading
+## Pre-Reading (Optional)
 
-- Preface chapter of the course book (English translation pending)
-- W&B usage chapter of the course book (English translation pending)
+- Preface chapter of the course book (optional — not yet available in English)
+- W&B usage chapter of the course book (optional — not yet available in English)
 
 ## Lab Files
 

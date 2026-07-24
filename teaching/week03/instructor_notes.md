@@ -428,10 +428,10 @@ In the lab, `Swish` is implemented as `F.silu`, which is the Swish-1 activation 
 | Variant | `d_ff` | Formula | Approx. parameters |
 |---------|--------|---------|-------------------|
 | Standard ReLU FFN (lab demo) | `4 * d_model = 2048` | `2 · d_model · d_ff` | `2 · 512 · 2048 = 2,097,152` |
-| SwiGLU (lab default) | `≈ 8/3 · d_model = 1536` | `3 · d_model · d_ff` | `3 · 512 · 1536 = 2,359,296` |
+| SwiGLU (lab default) | `8/3 · 512 ≈ 1365, rounded up to a multiple of 256 = 1536` | `3 · d_model · d_ff` | `3 · 512 · 1536 = 2,359,296` |
 | SwiGLU with same `d_ff` as standard | `2048` | `3 · d_model · d_ff` | `3 · 512 · 2048 = 3,145,728` |
 
-Takeaway: **for the same hidden dimension `d_ff`, SwiGLU has ~50% more parameters** because it has three matrices instead of two. Modern implementations choose `d_ff ≈ 8/3 · d_model` so the *total* FFN size stays similar to a standard `d_ff = 4 · d_model` block while gaining the gating nonlinearity.
+Takeaway: **for the same hidden dimension `d_ff`, SwiGLU has ~50% more parameters** because it has three matrices instead of two. Modern implementations choose `d_ff ≈ 8/3 · d_model` (then round up to a hardware-friendly multiple, e.g. 256, as LLaMA does) so the *total* FFN size stays similar to a standard `d_ff = 4 · d_model` block while gaining the gating nonlinearity.
 
 #### 4.3 Code connection: `04_rmsnorm_swiglu.py`
 

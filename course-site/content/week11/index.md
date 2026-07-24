@@ -9,9 +9,9 @@ By the end of this week, students should be able to:
 - Design reward functions for math reasoning tasks.
 - Diagnose reward hacking and length bias.
 
-## Pre-Reading
+## Pre-Reading (Optional)
 
-- RLVR (Reinforcement Learning with Verifiable Rewards) chapter of the course book (English translation pending)
+- RLVR (Reinforcement Learning with Verifiable Rewards) chapter of the course book (optional — not yet available in English)
 - DeepSeek-R1 paper (optional)
 
 ## Lab Files

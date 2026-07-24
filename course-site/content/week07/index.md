@@ -9,9 +9,9 @@ By the end of this week, students should be able to:
 - Understand gradient synchronization and the communication overhead.
 - Describe when to use FSDP vs. DDP.
 
-## Pre-Reading
+## Pre-Reading (Optional)
 
-- Distributed Training chapter of the course book (English translation pending)
+- Distributed Training chapter of the course book (optional — not yet available in English)
 
 ## Lab Files
 

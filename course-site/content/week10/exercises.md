@@ -6,7 +6,7 @@ Replace the toy dataset in `sft_demo.py` with a real instruction dataset (e.g., 
 
 **Deliverable**: `exercises/sft_real_data.py` + before/after samples.
 
-## Exercise 10.2: Prompt-Only Loss
+## Exercise 10.2: Response-Only Loss
 
 Modify `sft_demo.py` to compute loss only on the response tokens, masking out the prompt tokens in the labels. Compare to training on the full sequence.
 

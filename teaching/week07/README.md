@@ -9,7 +9,7 @@ By the end of this week, students should be able to:
 - Understand gradient synchronization and the communication overhead.
 - Describe when to use FSDP vs. DDP.
 
-## Pre-Reading
+## Pre-Reading (Optional)
 
 - `docs/en/chapter8/chapter8_第八章分布式训练.md`
 

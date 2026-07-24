@@ -159,7 +159,7 @@ import torch
 
 def set_seed(seed: int) -> None:
     random.seed(seed)
-    np.random.default_rng(seed)
+    np.random.seed(seed)
     torch.manual_seed(seed)
     torch.cuda.manual_seed_all(seed)
     # deterministic flags can be set when full determinism is required

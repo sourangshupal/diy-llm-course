@@ -91,7 +91,7 @@ Without disciplined evaluation, teams routinely ship models that are overfit to 
 flowchart TD
     A[Pre-train on web text] --> B[Minimize cross-entropy loss]
     B --> C[Low loss?]
-    C --> D{Evalulate on tasks}
+    C --> D{Evaluate on tasks}
     D --> E[Benchmark accuracy]
     D --> F[Perplexity on held-out text]
     D --> G[Human preference / safety]

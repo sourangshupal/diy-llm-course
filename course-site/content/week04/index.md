@@ -9,9 +9,9 @@ By the end of this week, students should be able to:
 - Generate text from a trained model using temperature and top-k/top-p sampling.
 - Save and load checkpoints correctly.
 
-## Pre-Reading
+## Pre-Reading (Optional)
 
-- Language Model Architecture & Training chapter of the course book (English translation pending)
+- Language Model Architecture & Training chapter of the course book (optional — not yet available in English)
 - Assignment 1 README: `coursework/assignment1-basics/README.md`
 
 ## Lab Files

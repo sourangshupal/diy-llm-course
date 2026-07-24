@@ -10,7 +10,7 @@ By the end of this week, students should be able to:
 - Understand the difference between LayerNorm and RMSNorm.
 - Implement SwiGLU and compare it to standard feed-forward networks.
 
-## Pre-Reading
+## Pre-Reading (Optional)
 
 - `docs/en/chapter3/chapter3_pytorch与资源核算.md`
 - `docs/en/chapter4/chapter4_第四章语言模型架构和训练的技术细节.md`

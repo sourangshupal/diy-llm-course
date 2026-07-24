@@ -159,7 +159,7 @@ import torch
 
 def set_seed(seed: int) -> None:
     random.seed(seed)
-    np.random.default_rng(seed)
+    np.random.seed(seed)
     torch.manual_seed(seed)
     torch.cuda.manual_seed_all(seed)
     # deterministic flags can be set when full determinism is required
@@ -590,7 +590,7 @@ with wandb.init(project="diy-llm-week1-demo", config=config) as run:
 
 1. Compare two learning rates using `exercises/wandb_compare.py` and write two sentences on which converged faster and why.
 2. Add a custom metric (gradient norm, validation accuracy, or histogram) and submit the run link.
-3. Read the Preface chapter of the course book (English translation pending) and one W&B documentation page on artifacts.
+3. Read the Preface chapter of the course book (optional — not yet available in English) and one W&B documentation page on artifacts.
 
 ### Stretch (for advanced students)
 
@@ -621,7 +621,7 @@ with wandb.init(project="diy-llm-week1-demo", config=config) as run:
 - Students will implement a BPE tokenizer from scratch.
 - Key concepts: pre-tokenization, merges, vocabulary construction, encoding/decoding, edge cases (Unicode, spaces, numbers).
 - Deliverable: a trained BPE tokenizer with a small vocabulary, applied to a sample corpus.
-- Suggested prep: review string operations in Python and read the Tokenizer chapter of the course book (English translation pending).
+- Suggested prep: review string operations in Python and read the Tokenizer chapter of the course book (optional — not yet available in English).
 
 ---
 

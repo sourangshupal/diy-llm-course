@@ -433,9 +433,9 @@ $$
 
 | Temperature | Approx. probabilities | Effect |
 |-------------|-----------------------|--------|
-| $T=0.1$ | `[0.95, 0.05, 0.00]` | Deterministic, repetitive |
+| $T=0.1$ | `[1.00, 0.00, 0.00]` | Deterministic, repetitive |
 | $T=1.0$ | `[0.66, 0.24, 0.10]` | Balanced |
-| $T=2.0$ | `[0.45, 0.31, 0.24]` | Diverse, risk of nonsense |
+| $T=2.0$ | `[0.50, 0.30, 0.19]` | Diverse, risk of nonsense |
 
 #### 3.3 Top-k and top-p sampling
 

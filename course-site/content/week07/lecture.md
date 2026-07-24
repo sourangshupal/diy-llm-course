@@ -758,7 +758,7 @@ python teaching/week07/lab/communication_cost.py \
 
 - Launch DDP with 4 CPU processes and explain why throughput may not scale linearly.
 - Profile `communication_cost.py` for a 7B and 70B model at 800 Gbps; discuss feasibility.
-- Read the Distributed Training chapter of the course book (English translation pending) and identify one additional detail not covered in lecture.
+- Read the Distributed Training chapter of the course book (optional — not yet available in English) and identify one additional detail not covered in lecture.
 
 ---
 
@@ -813,7 +813,7 @@ Use these during lecture, lab, or the wrap-up:
 
 ### Reading
 
-- Read the Distributed Training chapter of the course book (English translation pending) in full.
+- Read the Distributed Training chapter of the course book (optional — not yet available in English) in full.
 - Skim the Megatron-LM paper (Shoeybi et al., 2019) for tensor-parallelism details.
 - Skim the DeepSpeed ZeRO paper (Rajbhandari et al., 2020) for ZeRO-1/2/3 stages.
 

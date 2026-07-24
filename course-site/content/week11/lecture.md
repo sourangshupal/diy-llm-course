@@ -303,11 +303,13 @@ KL_i = E_t [ log π_ref(y_t) − log πθ(y_t) ]
 L_total = L_CLIP + β · KL_i
 ```
 
-This estimates **KL(ref || πθ)** because:
+This is a Monte Carlo estimate of **KL(ref || πθ)**, since in expectation over samples from π_ref:
 
 ```text
 E_ref[log(ref / πθ)] = KL(ref || πθ)
 ```
+
+**Caveat:** the tokens `y_t` here are actually sampled from the rollout policy, not π_ref, so this is technically a biased estimator, not the exact expectation above. Production GRPO implementations (e.g. TRL) commonly use the lower-variance, always-non-negative **k3 estimator** (`exp(log_ratio) - log_ratio - 1`) instead of this naive difference for that reason. The naive version above is fine for building intuition in the lab.
 
 In code:
 
@@ -525,7 +527,7 @@ For `eps=0.2`, the clip range is `[0.8, 1.2]`.
 | Ratio | Advantage | Unclipped term | Clipped term | Effective term |
 |-------|-----------|----------------|--------------|----------------|
 | 1.5 | +1.0 | +1.5 | +1.2 | **+1.2** (clipped) |
-| 0.6 | +1.0 | +0.6 | +0.8 | **+0.8** (clipped) |
+| 0.6 | +1.0 | +0.6 | +0.8 | **+0.6** (unclipped — `min(0.6, 0.8) = 0.6`) |
 | 1.5 | −1.0 | −1.5 | −1.2 | **−1.5** (unclipped) |
 
 Notice clipping is **asymmetric** with negative advantages: a ratio of 1.5 with A=−1.0 is *not* clipped because it still discourages the update.
@@ -780,7 +782,7 @@ If the prompt contains the answer or a strong hint, the model may learn to copy 
 
 - DeepSeek-R1 paper (focus on GRPO and cold-start sections).
 - Qwen2.5-Math technical report (focus on reward design for math).
-- The RLVR chapter of the course book (English translation pending) for the course's own framing.
+- The RLVR chapter of the course book (optional — not yet available in English) for the course's own framing.
 
 ### Discussion forum prompt
 

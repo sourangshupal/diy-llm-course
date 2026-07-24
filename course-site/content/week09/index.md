@@ -5,13 +5,13 @@
 By the end of this week, students should be able to:
 
 - Build a pre-training data pipeline: language ID, quality filtering, deduplication.
-- Implement a simple n-gram quality classifier.
+- Implement a rule-based and a tiny neural perplexity-based quality classifier.
 - Use MinHash for approximate near-duplicate detection.
 - Evaluate the impact of filtering on downstream perplexity.
 
-## Pre-Reading
+## Pre-Reading (Optional)
 
-- Data Engineering chapter of the course book (English translation pending)
+- Data Engineering chapter of the course book (optional — not yet available in English)
 
 ## Lab Files
 

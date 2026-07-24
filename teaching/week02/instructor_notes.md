@@ -108,11 +108,11 @@ Merge #2: ('er', '</w>') -> 'er</w>' (freq 3)
 Merge #3: ('e', 's') -> 'es' (freq 3)
 Merge #4: ('es', 't') -> 'est' (freq 3)
 Merge #5: ('est', '</w>') -> 'est</w>' (freq 3)
-Merge #6: ('l', 'o') -> 'lo' (freq 6)
-Merge #7: ('lo', 'w') -> 'low' (freq 6)
+Merge #6: ('l', 'o') -> 'lo' (freq 3)
+Merge #7: ('lo', 'w') -> 'low' (freq 3)
 Merge #8: ('n', 'e') -> 'ne' (freq 3)
 Merge #9: ('ne', 'w') -> 'new' (freq 3)
-Merge #10: ('w', '</w>') -> 'w</w>' (freq 6)
+Merge #10: ('w', '</w>') -> 'w</w>' (freq 1)
 ```
 
 After these merges, `"lowest"` might be encoded as `['low', 'est</w>']` depending on merge priorities — run the script to see the exact result.
@@ -309,7 +309,7 @@ Run `inspect_tokenizer.py` to verify the exact counts.
 1. **Open the file.** Walk through the pipeline:
    ```mermaid
    flowchart LR
-       A[build_corpus] --> B[Tokenizer\(BPE\)]
+       A[build_corpus] --> B["Tokenizer (BPE)"]
        B --> C[pre_tokenizer = Whitespace]
        C --> D[BpeTrainer]
        D --> E[tokenizer.train]

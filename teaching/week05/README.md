@@ -9,7 +9,7 @@ By the end of this week, students should be able to:
 - Estimate arithmetic intensity and use the roofline model.
 - Explain why memory bandwidth often limits Transformer training.
 
-## Pre-Reading
+## Pre-Reading (Optional)
 
 - `docs/en/chapter5/chapter5_混合专家模型.md` (MoE overview)
 - `docs/en/chapter6/chapter6_第六章GPU和GPU相关的优化.md`

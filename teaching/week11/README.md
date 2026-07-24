@@ -9,7 +9,7 @@ By the end of this week, students should be able to:
 - Design reward functions for math reasoning tasks.
 - Diagnose reward hacking and length bias.
 
-## Pre-Reading
+## Pre-Reading (Optional)
 
 - `docs/en/chapter14/chapter14_可验证奖励的强化学习.md`
 - DeepSeek-R1 paper (optional)

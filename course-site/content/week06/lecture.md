@@ -117,13 +117,13 @@ Because the arithmetic intensity (FLOPs per byte moved) is low, the operation is
 
 ```mermaid
 flowchart LR
-    HBM_Q[Q (N×d)] --> S[matmul QK^T]
-    HBM_K[K (N×d)] --> S
+    HBM_Q["Q (N×d)"] --> S["matmul QK^T"]
+    HBM_K["K (N×d)"] --> S
     S --> HBM_S["S (N×N) in HBM"]
     HBM_S --> SM[softmax]
     SM --> HBM_P["P (N×N) in HBM"]
-    HBM_P --> O[matmul PV]
-    HBM_V[V (N×d)] --> O
+    HBM_P --> O["matmul PV"]
+    HBM_V["V (N×d)"] --> O
     O --> HBM_O["O (N×d) in HBM"]
 ```
 
@@ -149,10 +149,10 @@ The HBM traffic drops from `O(N²)` to `O(N)`, which is the difference between a
 ```mermaid
 flowchart LR
     subgraph HBM
-        Q[Q (N×d)]
-        K[K (N×d)]
-        V[V (N×d)]
-        O[O (N×d)]
+        Q["Q (N×d)"]
+        K["K (N×d)"]
+        V["V (N×d)"]
+        O["O (N×d)"]
     end
     subgraph SRAM["On-chip SRAM per tile"]
         Qi["Q_i (BLOCK_N×d)"]

@@ -9,9 +9,9 @@ By the end of this week, students should be able to:
 - Implement expert iteration: generate reasoning traces, filter incorrect ones, and retrain.
 - Evaluate SFT models on a simple task.
 
-## Pre-Reading
+## Pre-Reading (Optional)
 
-- Large Model Training Pipeline chapter of the course book (English translation pending)
+- Large Model Training Pipeline chapter of the course book (optional — not yet available in English)
 
 ## Lab Files
 

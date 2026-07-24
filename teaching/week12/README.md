@@ -9,7 +9,7 @@ By the end of this week, students should be able to:
 - Understand zero-shot vs. few-shot prompting in evaluation.
 - Interpret evaluation results and compare models fairly.
 
-## Pre-Reading
+## Pre-Reading (Optional)
 
 - `docs/en/chapter10/推理.md` (inference)
 - `docs/en/chapter12/chapter12_评估与基准测试.md`

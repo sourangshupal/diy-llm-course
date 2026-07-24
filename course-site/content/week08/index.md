@@ -9,9 +9,9 @@ By the end of this week, students should be able to:
 - Use scaling laws to predict the loss of a new model size or training budget.
 - Design an IsoFLOPs experiment to find optimal model-data allocations.
 
-## Pre-Reading
+## Pre-Reading (Optional)
 
-- Scaling Laws chapter of the course book (English translation pending)
+- Scaling Laws chapter of the course book (optional — not yet available in English)
 - Hoffmann et al., "Training Compute-Optimal Large Language Models" (Chinchilla)
 
 ## Lab Files

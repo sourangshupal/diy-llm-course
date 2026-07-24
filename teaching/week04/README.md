@@ -9,7 +9,7 @@ By the end of this week, students should be able to:
 - Generate text from a trained model using temperature and top-k/top-p sampling.
 - Save and load checkpoints correctly.
 
-## Pre-Reading
+## Pre-Reading (Optional)
 
 - `docs/en/chapter4/chapter4_第四章语言模型架构和训练的技术细节.md`
 - Assignment 1 README: `coursework/assignment1-basics/README.md`

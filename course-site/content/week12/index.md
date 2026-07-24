@@ -9,10 +9,10 @@ By the end of this week, students should be able to:
 - Understand zero-shot vs. few-shot prompting in evaluation.
 - Interpret evaluation results and compare models fairly.
 
-## Pre-Reading
+## Pre-Reading (Optional)
 
-- Inference chapter of the course book (English translation pending)
-- Evaluation & Benchmarks chapter of the course book (English translation pending)
+- Inference chapter of the course book (optional — not yet available in English)
+- Evaluation & Benchmarks chapter of the course book (optional — not yet available in English)
 
 ## Lab Files
 

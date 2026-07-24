@@ -9,7 +9,7 @@ By the end of this week, students should be able to:
 - Log metrics, hyperparameters, and artifacts to Weights & Biases (W&B).
 - Interpret a simple W&B dashboard.
 
-## Pre-Reading
+## Pre-Reading (Optional)
 
 - `docs/en/前言.md` — Preface
 - `docs/en/chapter1/wandb使用介绍.md` — W&B usage (if available in English)

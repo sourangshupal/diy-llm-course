@@ -866,7 +866,7 @@ Interpretation:
    Modify `profile_model.py` to accumulate gradients over 4 micro-batches. How does the operator mix change?
 
 4. **Read ahead.**  
-   Skim the GPU Optimization chapter of the course book (English translation pending) and note one optimization technique you want to understand better.
+   Skim the GPU Optimization chapter of the course book (optional — not yet available in English) and note one optimization technique you want to understand better.
 
 5. **Compare precision.**  
    Run `profile_model.py` with `torch.set_default_dtype(torch.bfloat16)` vs. `float32`. How do time and memory change? Why?

@@ -9,7 +9,7 @@ By the end of this week, students should be able to:
 - Implement expert iteration: generate reasoning traces, filter incorrect ones, and retrain.
 - Evaluate SFT models on a simple task.
 
-## Pre-Reading
+## Pre-Reading (Optional)
 
 - `docs/en/chapter13/chapter13_第十三章大模型的基本训练流程.md`
 

@@ -9,9 +9,9 @@ By the end of this week, students should be able to:
 - Understand the tiling and online-softmax ideas behind FlashAttention.
 - Implement a tiled attention kernel in Triton.
 
-## Pre-Reading
+## Pre-Reading (Optional)
 
-- GPU High-Performance Programming chapter of the course book (English translation pending)
+- GPU High-Performance Programming chapter of the course book (optional — not yet available in English)
 - Optional: Dao et al., "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness"
 
 ## Lab Files

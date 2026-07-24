@@ -195,7 +195,7 @@ def detect_language_simple(text: str) -> str:
 | `"Быстрая коричневая лисица прыгает через ленивую собаку."` | `ru` | >10% Cyrillic |
 | `"asdf qwer zxcv 1234 !!!"` | `en` | ASCII falls through to default `en` |
 
-**Check-for-understanding:** *The last row is labeled `en` but is clearly gibberish. Which later stage of the pipeline will catch it?* (Answer: quality filtering, because `alpha_ratio` is low and the text has no real words.)
+**Check-for-understanding:** *The last row is labeled `en` but is clearly gibberish. Which later stage of the pipeline will catch it?* (Answer: quality filtering — though not the `alpha_ratio` rule, since every character here is still a letter, digit, or punctuation `alpha_ratio` treats as non-signal; this string actually has `alpha_ratio ≈ 0.70`, above the `0.5` reject threshold. It slips past the rule-based heuristics and would need the perplexity filter to catch it.)
 
 ---
 
@@ -220,8 +220,8 @@ The lab also enforces a **minimum length** (`len(text) < 20`) before computing t
 | Text | alpha_ratio | repeat_ratio | avg_word_len | Verdict |
 |------|-------------|--------------|--------------|---------|
 | `"The quick brown fox jumps over the lazy dog."` | ~0.98 | 0.0 | ~3.9 | Keep |
-| `"asdf qwer zxcv 1234 !!!"` | ~0.54 | 0.0 | 4.0 | Reject (alpha_ratio borderline, but in practice perplexity also high) |
-| `"aaaaaa bbbbbb cccccc dddddd"` | ~0.92 | 0.46 | 7.0 | Reject (repeat_ratio > 0.2) |
+| `"asdf qwer zxcv 1234 !!!"` | ~0.70 | 0.0 | 3.8 | **Passes** rule-based filters (alpha_ratio 0.70 is above the 0.5 threshold); only the perplexity filter would catch this as gibberish |
+| `"aaaaaa bbbbbb cccccc dddddd"` | 1.0 | ~0.74 | 6.0 | Reject (repeat_ratio > 0.2) |
 
 #### 4.2 Model-based filtering
 
@@ -313,7 +313,7 @@ Example: `"hello world"` with `k=3` → `{"hel", "ell", "llo", "lo ", "o w", " w
 threshold ≈ (1 / bands)^(1 / rows)
 ```
 
-In the lab: `num_perm = 128`, `bands = 16`, so `rows = 128 / 16 = 8`, and `threshold ≈ (1/16)^(1/8) ≈ 0.75`. The lab verifies with a stricter `threshold = 0.8`.
+In the lab: `num_perm = 128`, `bands = 16`, so `rows = 128 / 16 = 8`, and `threshold ≈ (1/16)^(1/8) ≈ 0.71`. The lab verifies with a stricter `threshold = 0.8`.
 
 **Step 4: Verification.** Recompute exact Jaccard similarity on candidate pairs and remove only those above the threshold.
 
@@ -651,7 +651,7 @@ Students should produce a short markdown report containing:
 1. Replace `detect_language_simple()` in `lab/01_language_id.py` with `fastText` and compare accuracy on a multilingual sample.
 2. Implement **exact deduplication** as a pre-processing step before `lab/03_dedup.py` and measure the speedup.
 3. Train the Week 4 tiny model on `raw.jsonl` vs. `deduped.jsonl` and compare final perplexity.
-4. Read the Data Engineering chapter of the course book (English translation pending) and note one concept not covered in class.
+4. Read the Data Engineering chapter of the course book (optional — not yet available in English) and note one concept not covered in class.
 
 ---
 

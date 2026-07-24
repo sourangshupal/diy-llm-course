@@ -91,7 +91,7 @@ Without disciplined evaluation, teams routinely ship models that are overfit to 
 flowchart TD
     A[Pre-train on web text] --> B[Minimize cross-entropy loss]
     B --> C[Low loss?]
-    C --> D{Evalulate on tasks}
+    C --> D{Evaluate on tasks}
     D --> E[Benchmark accuracy]
     D --> F[Perplexity on held-out text]
     D --> G[Human preference / safety]
@@ -677,7 +677,7 @@ For a 4-choice task, random guessing gives 25%. A score of 29% is only barely ab
 
 ## Homework / Follow-Up Suggestions
 
-1. **Read the docs.** Review the Evaluation & Benchmarks chapter of the course book (English translation pending) and note three benchmarks not covered in class.
+1. **Read the docs.** Review the Evaluation & Benchmarks chapter of the course book (optional — not yet available in English) and note three benchmarks not covered in class.
 2. **Run two lm-eval tasks.** Pick one reasoning task (e.g., `gsm8k`) and one knowledge task (e.g., `arc_challenge`). Report a fair comparison table.
 3. **Design a custom task.** Choose a domain (law, medicine, code review, your native language). Write 20–50 samples, pick a metric, and evaluate `gpt2` plus one stronger model.
 4. **Compare SFT vs. GRPO outputs.** Use the Week 10 SFT model and a Week 11 GRPO checkpoint on the same custom task. Discuss what changed.

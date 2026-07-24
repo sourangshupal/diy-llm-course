@@ -9,9 +9,9 @@ By the end of this week, students should be able to:
 - Train a BPE tokenizer on a small corpus using the Hugging Face `tokenizers` library.
 - Encode and decode text, inspect merges, and analyze vocabulary.
 
-## Pre-Reading
+## Pre-Reading (Optional)
 
-- Tokenizer chapter of the course book (English translation pending)
+- Tokenizer chapter of the course book (optional — not yet available in English)
 
 ## Lab Files
 

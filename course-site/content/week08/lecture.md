@@ -89,9 +89,9 @@ L(N, D) = E + A / N^α + B / D^β
 > **Toy example:** If `N = 10^9`, `D = 2 × 10^10`, using the Chinchilla constants:
 >
 > ```text
-> A/N^α ≈ 406.4 / (10^9)^0.34 ≈ 0.18
-> B/D^β ≈ 410.7 / (2 × 10^10)^0.28 ≈ 0.15
-> L ≈ 1.69 + 0.18 + 0.15 = 2.02
+> A/N^α ≈ 406.4 / (10^9)^0.34 ≈ 0.35
+> B/D^β ≈ 410.7 / (2 × 10^10)^0.28 ≈ 0.54
+> L ≈ 1.69 + 0.35 + 0.54 = 2.58
 > ```
 
 ### 4.3 Non-Embedding Parameters vs. Total Parameters
@@ -352,7 +352,7 @@ print(f"Training FLOPs: {flops:.2e}")
 Expected output (order of magnitude):
 
 ```text
-Predicted loss: 2.02
+Predicted loss: 2.58
 Training FLOPs: 1.20e+20
 ```
 
@@ -573,7 +573,7 @@ Expected output:
 IsoFLOPs sweep for FLOPs budget = 1.00e+18
 Optimal N = 9.13e+07 params
 Optimal D = 1.83e+09 tokens
-Predicted loss = 2.9xxx
+Predicted loss = 3.54xx
 Tokens per param = 20.0
 Saved plot to week08/outputs/isoflops_1e+18.png
 ```
