@@ -1,0 +1,97 @@
+site_name: Diy-LLM Course
+site_description: A 12-week, build-from-scratch LLM course (Stanford CS336-based)
+repo_url: https://github.com/datawhalechina/diy-llm
+repo_name: datawhalechina/diy-llm
+docs_dir: content
+
+nav:
+  - Home: index.md
+  - Syllabus: syllabus.md
+  - Timetable: timetable.md
+  - Week 1 - Course Introduction & Experiment Tracking:
+      - Overview: week01/index.md
+      - Lecture: week01/lecture.md
+      - Exercises: week01/exercises.md
+  - Week 2 - Tokenization:
+      - Overview: week02/index.md
+      - Lecture: week02/lecture.md
+      - Exercises: week02/exercises.md
+  - Week 3 - Transformer Architecture I - Building Blocks:
+      - Overview: week03/index.md
+      - Lecture: week03/lecture.md
+      - Exercises: week03/exercises.md
+  - Week 4 - Transformer Architecture II - Full Model & Training Loop:
+      - Overview: week04/index.md
+      - Lecture: week04/lecture.md
+      - Exercises: week04/exercises.md
+  - Week 5 - GPU Architecture & Optimization:
+      - Overview: week05/index.md
+      - Lecture: week05/lecture.md
+      - Exercises: week05/exercises.md
+  - Week 6 - High-Performance Kernels with Triton:
+      - Overview: week06/index.md
+      - Lecture: week06/lecture.md
+      - Exercises: week06/exercises.md
+  - Week 7 - Distributed Training:
+      - Overview: week07/index.md
+      - Lecture: week07/lecture.md
+      - Exercises: week07/exercises.md
+  - Week 8 - Scaling Laws:
+      - Overview: week08/index.md
+      - Lecture: week08/lecture.md
+      - Exercises: week08/exercises.md
+  - Week 9 - Data Engineering:
+      - Overview: week09/index.md
+      - Lecture: week09/lecture.md
+      - Exercises: week09/exercises.md
+  - Week 10 - Alignment - SFT & Expert Iteration:
+      - Overview: week10/index.md
+      - Lecture: week10/lecture.md
+      - Exercises: week10/exercises.md
+  - Week 11 - Alignment - GRPO & RLVR:
+      - Overview: week11/index.md
+      - Lecture: week11/lecture.md
+      - Exercises: week11/exercises.md
+  - Week 12 - Evaluation Frameworks:
+      - Overview: week12/index.md
+      - Lecture: week12/lecture.md
+      - Exercises: week12/exercises.md
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.instant
+    - content.code.copy
+    - toc.follow
+
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - tables
+  - toc:
+      permalink: true
+
+plugins:
+  - search

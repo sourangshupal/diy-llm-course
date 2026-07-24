@@ -1,0 +1,56 @@
+[project]
+name = "diy-llm-teaching"
+version = "0.1.0"
+description = "Teaching materials and runnable labs for the Diy-LLM course."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "CC-BY-NC-SA-4.0" }
+authors = [
+    { name = "Diy-LLM Teaching Team" },
+]
+dependencies = [
+    # Core ML / numerics (resolved to latest stable versions via uv)
+    "numpy>=2.0",
+    "torch>=2.12",
+    "matplotlib>=3.10",
+    "scipy>=1.15",
+    "tqdm>=4.68",
+    "psutil>=6.0",
+
+    # Hugging Face ecosystem
+    "transformers>=5.0",
+    "tokenizers>=0.22",
+    "huggingface-hub>=0.30",
+    "datasets>=3.0",
+    "safetensors>=0.5",
+
+    # Experiment tracking
+    "wandb>=0.28",
+
+    # Required by transformers.Trainer
+    "accelerate>=1.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.11",
+    "jupyterlab>=4.3",
+]
+
+[tool.uv]
+# Ensure reproducible resolution; do not include assignment-specific heavy extras here
+# because packages like vLLM pin older torch/transformers versions. Those are installed
+# manually in the corresponding week following the week README instructions.
+python-preference = "only-managed"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "C4", "SIM"]
+
+[tool.pytest.ini_options]
+testpaths = ["teaching"]
+python_files = ["test_*.py"]
